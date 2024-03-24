@@ -6,8 +6,11 @@
         <li class="group relative">
           <a href="#">Proxies<n-icon size="20" class="rounded-md py-1 px-1"><ChevronDown class="group-hover:rotate-180"/></n-icon></a>
           <div class="links">
-            <a href="/package/1" class=" block px-4 py-2 hover:bg-gray-300">套餐1</a>
-            <a href="/package/1" class=" block px-4 py-2 hover:bg-gray-300">套餐2</a>
+            <a href="/package/1" class=" block px-4 py-2 hover:bg-gray-300">Residential (Socks5) Proxies</a>
+            <a href="/package/1" class=" block px-4 py-2 hover:bg-gray-300">Residential Proxies</a>
+            <a href="/package/1" class=" block px-4 py-2 hover:bg-gray-300">Static Residential Proxies</a>
+            <a href="/package/1" class=" block px-4 py-2 hover:bg-gray-300">Rotating ISP Proxies</a>
+            <a href="/package/1" class=" block px-4 py-2 hover:bg-gray-300">Dedicated Datacenter Proxies</a>
           </div>
         </li>
         <li class="pricing relative">
@@ -59,7 +62,7 @@ const handleClose = (e) => {
 }
 .links {
   z-index: 10;
-  @apply absolute w-48 flex flex-col bg-white text-gray-700 text-sm top-10 right-0 ring-1 ring-black ring-opacity-5 rounded-md scale-0 group-hover:!scale-100 duration-300 origin-top-right shadow-lg;
+  @apply absolute w-[320px] flex flex-col bg-white text-gray-700 text-sm top-10 left-[-70px] ring-1 ring-black ring-opacity-5 rounded-md scale-0 group-hover:!scale-100 duration-300 origin-top-right shadow-lg;
 }
 
 .pricing span{

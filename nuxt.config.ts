@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss'],
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.less'],
   build: {
     transpile:
       process.env.NODE_ENV === 'production'
@@ -15,12 +15,6 @@ export default defineNuxtConfig({
         : ['@juggle/resize-observer']
   },
   nitro: {
-    // devProxy: {
-    //   '/api': {
-    //       target: 'http://localhost:5000',
-    //       changeOrigin: true,
-    //   },
-    // },
     routeRules: {
       '/api/**': {
         proxy: 'http://localhost:5000/**'
@@ -33,6 +27,20 @@ export default defineNuxtConfig({
         process.env.NODE_ENV === 'development'
           ? ['naive-ui', 'vueuc', 'date-fns-tz/formatInTimeZone']
           : []
+    },
+    css: {
+      preprocessorOptions: {
+        less: {
+         
+        }
+      },
+    },
+  },
+  postcss: {
+    plugins: {
+      "postcss-import": {},
+      tailwindcss: {},
+      autoprefixer: {},
     }
   }
 })

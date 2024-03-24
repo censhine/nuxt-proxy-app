@@ -1,9 +1,16 @@
 <template>
-    <header class="h-[60px] w-full">
+    <div class="body">
         <nav-header/>
-    </header>
-    <section class="h-[100%]"><slot/></section>
-    <footer class="h-[100px] border-t-blue-500 mt-auto">
+        <main>
+            <slot/>
+        </main>
         <nav-footer/>
-    </footer>
+    </div>
 </template>
+
+<style scoped>
+.body {
+    min-width: 1000px;
+    @apply flex flex-col min-h-screen bg-gray-100
+}
+</style>
